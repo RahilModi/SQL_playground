@@ -10,9 +10,9 @@ app.use(express.static(__dirname + '/public'));
 
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: 'root',
-	password: 'Rpmodi@3112',
-	database: 'join_us'
+	user: <username>,
+	password: <password>,
+	database: <Database_name>
 });
 
 connection.connect(function(err) {
@@ -43,8 +43,15 @@ app.post('/register',(req,res)=>{
 
 	var q = "INSERT INTO users SET ?";
 	connection.query(q, person, (err,results)=>{
-		if(err) throw err;
-		console.log(results);
+		if(err) {
+			if(err.code == 'ER_DUP_ENTRY'){
+				console.log(err.code);
+			}else{
+				throw err;
+			}
+		}else{
+			console.log(results);
+		}
 	});
 	//res.send("Thanks for Joining US");
 	res.redirect("/");

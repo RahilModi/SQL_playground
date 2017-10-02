@@ -14,7 +14,7 @@ connection.connect(function(err) {
 });
 
 
-//creates users table in join_us database;
+//creates users table in join_us database
 var query ='CREATE TABLE users ( email VARCHAR(255) PRIMARY KEY, created_at TIMESTAMP DEFAULT now() );'
 connection.query(query, (err,results)=>{
 	if(err) throw err;
