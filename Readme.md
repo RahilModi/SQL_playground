@@ -1,6 +1,6 @@
 # sql practice
 
-1) ig_clone.sql => to create databse and tables
+1) ig_clone.sql => to create databse and tables like users, photos, likes,comments,followers, tags, photo_tags
 
 2) ig_clone_data.sql => to populate tables with large dataset
 
