@@ -31,6 +31,7 @@ Now web app is running on localhost at port 3456. **http://localhost:3456**
 
 This web app is basically for how to connect node app to mysql.  
 Once user register with email id count of registered users will be incremented by 1.  
+When user attempts to enter same email-id more than once will not inserted into table and count will not be updated.
 
 
 
